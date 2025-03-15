@@ -1,0 +1,11 @@
+SELECT
+        f.Cliente_ID,
+        f.Produto_ID,
+        p.Nome AS Produto,
+        f.Quantidade
+    FROM
+        `BD.DW.fato_venda` f
+    JOIN
+        `BD.DW.dim_produto` p
+    ON
+        f.Produto_ID = p.Produto_ID
